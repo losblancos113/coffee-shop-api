@@ -1,0 +1,51 @@
+{
+  "name": "order_detail",
+  "plural": "order-detail",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id_order": {
+      "type": "number",
+      "required": true
+    },
+    "id_product": {
+      "type": "number",
+      "required": true
+    },
+    "product_name": {
+      "type": "string",
+      "required": true
+    },
+    "quantity": {
+      "type": "number",
+      "required": true
+    },
+    "note": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "product": {
+      "type": "belongsTo",
+      "model": "product",
+      "foreignKey": "id_product",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "order": {
+      "type": "belongsTo",
+      "model": "order",
+      "foreignKey": "id_order",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
