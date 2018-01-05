@@ -1,5 +1,5 @@
 {
-  "name": "order_detail",
+  "name": "OrderDetail",
   "plural": "order-detail",
   "base": "PersistedModel",
   "idInjection": true,
@@ -31,19 +31,13 @@
   "relations": {
     "product": {
       "type": "belongsTo",
-      "model": "product",
-      "foreignKey": "id_product",
-      "options": {
-        "nestRemoting": true
-      }
+      "model": "Product",
+      "foreignKey": "id_product"
     },
     "order": {
       "type": "belongsTo",
-      "model": "order",
-      "foreignKey": "id_order",
-      "options": {
-        "nestRemoting": true
-      }
+      "model": "Order",
+      "foreignKey": "id_order"
     }
   },
   "acls": [],

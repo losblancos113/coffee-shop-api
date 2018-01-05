@@ -1,5 +1,5 @@
 {
-  "name": "product",
+  "name": "Product",
   "plural": "product",
   "base": "PersistedModel",
   "idInjection": true,
@@ -33,14 +33,10 @@
   },
   "validations": [],
   "relations": {
-    "orders": {
-      "type": "hasMany",
-      "model": "order",
-      "foreignKey": "id_order",
-      "through": "order_detail",
-      "options": {
-        "nestRemoting": true
-      }
+    "categoryRel": {
+      "type": "belongsTo",
+      "model": "Category",
+      "foreignKey": "id_cate"
     }
   },
   "acls": [],

@@ -1,5 +1,5 @@
 {
-  "name": "category",
+  "name": "Category",
   "plural": "category",
   "base": "PersistedModel",
   "idInjection": true,
@@ -20,12 +20,13 @@
   "validations": [],
   "relations": {
     "products": {
-      "type": "hasMany",
-      "model": "product",
-      "foreignKey": "id_cate",
+      "type": "embedsMany",
+      "model": "Product",
+      "property": "productList",
       "options": {
-        "nestRemoting": true,
-        "disableInclude": true
+        "validate": true,
+        "forceId": true,
+        "persistent": true
       }
     }
   },

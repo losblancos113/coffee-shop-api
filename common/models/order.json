@@ -1,5 +1,5 @@
 {
-  "name": "order",
+  "name": "Order",
   "plural": "order",
   "base": "PersistedModel",
   "idInjection": true,
@@ -32,7 +32,7 @@
   "relations": {
     "products": {
       "type": "hasMany",
-      "model": "product",
+      "model": "Product",
       "foreignKey": "id_product",
       "through": "order_detail"
     }

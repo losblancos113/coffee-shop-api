@@ -14,7 +14,7 @@
     ]
   },
   "User": {
-    "dataSource": "db"
+    "dataSource": "mysql"
   },
   "AccessToken": {
     "dataSource": "db",
@@ -35,23 +35,19 @@
     "dataSource": "db",
     "public": false
   },
-  "user": {
+  "Category": {
     "dataSource": "mysql",
     "public": true
   },
-  "category": {
+  "Product": {
     "dataSource": "mysql",
     "public": true
   },
-  "product": {
+  "Order": {
     "dataSource": "mysql",
     "public": true
   },
-  "order": {
-    "dataSource": "mysql",
-    "public": true
-  },
-  "order_detail": {
+  "OrderDetail": {
     "dataSource": "mysql",
     "public": true
   }
