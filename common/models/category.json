@@ -20,14 +20,9 @@
   "validations": [],
   "relations": {
     "products": {
-      "type": "embedsMany",
+      "type": "hasMany",
       "model": "Product",
-      "property": "productList",
-      "options": {
-        "validate": true,
-        "forceId": true,
-        "persistent": true
-      }
+      "foreignKey": "id_cate"
     }
   },
   "acls": [],
